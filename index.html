@@ -3,44 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Universalie Apps — Simple, Privacy-Focused Mobile Apps</title>
-  <meta name="description" content="Official website and application catalog for Universalie Apps. Simple, reliable, and privacy-focused mobile applications." />
+  <title>Pastel Notes — Privacy Policy & Terms of Service</title>
+  <meta name="description" content="Privacy Policy and Terms of Service for Pastel Notes." />
   <link rel="icon" type="image/png" href="assets/universalieappsicon.png" />
   <link rel="apple-touch-icon" href="assets/universalieappsicon.png" />
   <style>
     :root {
-      --bg: #fcfcfc;
-      --card-bg: #ffffff;
+      --bg: #ffffff;
       --text: #1a1a1a;
-      --text-muted: #5a5a5a;
-      --border: #e6e6e6;
-      --surface: #f4f7f5;
+      --text-muted: #555555;
+      --border: #e2e2e2;
+      --surface: #f9f9f9;
       --primary: #2d5a49;
-      --primary-hover: #224538;
       --primary-bg: #edf4f0;
       --link: #1d6a4c;
-      --tag-bg: #edf4f0;
-      --tag-text: #2d5a49;
-      --shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-      --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #121413;
-        --card-bg: #1a1d1b;
-        --text: #ededed;
-        --text-muted: #9fa6a2;
-        --border: #28302c;
-        --surface: #1e2421;
+        --bg: #141414;
+        --text: #e6e6e6;
+        --text-muted: #9e9e9e;
+        --border: #2c2c2c;
+        --surface: #1e1e1e;
         --primary: #78a895;
-        --primary-hover: #92bda9;
         --primary-bg: #1c2b24;
         --link: #8bc2ab;
-        --tag-bg: #22332a;
-        --tag-text: #a8d5c2;
-        --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-        --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
       }
     }
 
@@ -59,60 +47,50 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
       font-size: 16px;
-      padding: 48px 16px 72px;
-      -webkit-font-smoothing: antialiased;
+      padding: 32px 16px 60px;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 780px;
       width: 100%;
       margin: 0 auto;
       min-width: 0;
     }
 
-    p, li, a, h1, h2, div {
+    p, li, td, th, a, h1, h2, code {
       overflow-wrap: break-word;
       word-break: break-word;
     }
 
-    /* Brand Header */
-    header {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 32px;
-      margin-bottom: 40px;
+    /* Top Navigation */
+    .top-nav {
+      margin-bottom: 28px;
     }
 
-    .header-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 12px;
-    }
-
-    .brand-row {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .header-actions {
+    .back-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .back-link:hover {
+      color: var(--text);
+      text-decoration: underline;
     }
 
     .nav-btn {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 7px 14px;
-      border-radius: 8px;
-      font-size: 0.88rem;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
       font-weight: 600;
       color: var(--text) !important;
       background-color: var(--surface);
@@ -122,226 +100,102 @@
     }
 
     .nav-btn:hover {
-      background-color: var(--card-bg);
       border-color: var(--primary);
       color: var(--primary) !important;
       text-decoration: none;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
 
-    .brand-mark {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
     }
 
     h1 {
       font-size: 2rem;
       font-weight: 700;
-      letter-spacing: -0.02em;
+      margin-bottom: 6px;
       color: var(--text);
+      letter-spacing: -0.01em;
     }
 
-    .tagline {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      line-height: 1.5;
-    }
-
-    /* Section Headings */
-    h2 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin: 36px 0 18px;
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    /* App Card */
-    .app-card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 24px;
-      box-shadow: var(--card-shadow);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .app-card:hover {
-      border-color: var(--primary);
-      box-shadow: var(--shadow);
-    }
-
-    .app-header-area {
-      display: flex;
-      align-items: flex-start;
-      gap: 18px;
-    }
-
-    .app-icon {
-      width: 72px;
-      height: 72px;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      flex-shrink: 0;
-      object-fit: cover;
-      background-color: var(--surface);
-    }
-
-    .app-title-group {
-      flex: 1;
-    }
-
-    .app-title {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 4px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .badge {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 2px 8px;
-      border-radius: 12px;
-      background-color: var(--tag-bg);
-      color: var(--tag-text);
-      border: 1px solid var(--border);
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
-
-    .app-subtitle {
+    .app-meta {
       color: var(--text-muted);
       font-size: 0.92rem;
     }
 
-    .app-desc {
-      color: var(--text);
-      font-size: 0.96rem;
-      line-height: 1.6;
-    }
-
-    /* Feature Pills */
-    .feature-pills {
+    /* Tabs */
+    .tab-bar {
       display: flex;
-      flex-wrap: wrap;
       gap: 8px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
     }
 
-    .pill {
-      font-size: 0.82rem;
-      background-color: var(--surface);
-      color: var(--text-muted);
-      border: 1px solid var(--border);
-      padding: 4px 10px;
-      border-radius: 6px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    /* App Card Action Buttons */
-    .app-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 4px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 9px 16px;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.15s ease;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background-color: var(--primary);
-      color: #ffffff !important;
+    .tab-btn {
+      background: none;
       border: 1px solid transparent;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--primary-hover);
-      text-decoration: none;
-    }
-
-    .btn-outline {
-      background-color: transparent;
-      color: var(--text) !important;
-      border: 1px solid var(--border);
-    }
-
-    .btn-outline:hover {
-      background-color: var(--surface);
-      border-color: var(--text-muted);
-      text-decoration: none;
-    }
-
-    /* Philosophy / Values */
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-      margin-top: 12px;
-    }
-
-    .value-box {
-      background-color: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px 18px;
-    }
-
-    .value-title {
-      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
       font-size: 0.95rem;
-      margin-bottom: 6px;
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .value-desc {
-      font-size: 0.88rem;
+      font-weight: 600;
       color: var(--text-muted);
-      line-height: 1.5;
+      cursor: pointer;
+      font-family: inherit;
     }
 
-    /* Contact Section */
-    .contact-card {
-      margin-top: 24px;
-      background-color: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 22px;
-      box-shadow: var(--card-shadow);
+    .tab-btn:hover {
+      color: var(--text);
+      background-color: var(--surface);
+    }
+
+    .tab-btn.active {
+      background-color: var(--primary-bg);
+      color: var(--primary);
+      border-color: var(--border);
+    }
+
+    /* Content Area */
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 28px 0 12px;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    ul, ol {
+      margin-bottom: 16px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    strong {
+      font-weight: 600;
     }
 
     a {
@@ -353,9 +207,63 @@
       text-decoration: underline;
     }
 
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.88em;
+      background-color: var(--surface);
+      padding: 2px 5px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    /* Table */
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 16px 0 20px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--surface);
+      font-weight: 600;
+    }
+
+    /* Info Box */
+    .info-box {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: 4px;
+      padding: 14px 16px;
+      margin: 18px 0;
+      font-size: 0.93rem;
+    }
+
+    .info-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Footer */
     footer {
-      margin-top: 60px;
-      padding-top: 24px;
+      margin-top: 48px;
+      padding-top: 20px;
       border-top: 1px solid var(--border);
       color: var(--text-muted);
       font-size: 0.85rem;
@@ -367,101 +275,212 @@
 
   <div class="container">
     
-    <!-- Top Header -->
+    <!-- Top Back Link -->
+    <div class="top-nav" style="display: flex; align-items: center; justify-content: space-between;">
+      <a href="index.html" class="back-link">← Universalie Apps</a>
+      <a href="mailto:thegeniuscoder100@gmail.com" class="nav-btn" title="Contact Us">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+          <rect width="20" height="16" x="2" y="4" rx="2"/>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+        </svg>
+        Contact
+      </a>
+    </div>
+
+    <!-- Header -->
     <header>
-      <div class="header-top">
-        <div class="brand-row">
-          <img src="assets/universalieappsicon.png" alt="Universalie Apps Logo" class="brand-mark" style="object-fit: cover; border-radius: 10px; border: 1px solid var(--border);" />
-          <h1>Universalie Apps</h1>
-        </div>
-        <div class="header-actions">
-          <a href="https://play.google.com/store/apps/dev?id=8771248470338271145" target="_blank" rel="noopener" class="nav-btn" title="Google Play Developer Page">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;">
-              <path d="M3.609 1.814L13.792 12 3.61 22.186c-.37-.34-.61-.83-.61-1.396V3.21c0-.566.24-1.056.609-1.396z" fill="#00D3FF"/>
-              <path d="M17.18 8.612L13.792 12l3.388 3.388 3.82-2.183c.8-.457.8-1.203 0-1.66L17.18 8.612z" fill="#FFCE00"/>
-              <path d="M13.792 12L3.61 1.814C3.89 1.557 4.29 1.45 4.7 1.684l12.48 7.13-3.388 3.186z" fill="#00E676"/>
-              <path d="M13.792 12l3.388 3.388-12.48 7.13c-.41.234-.81.127-1.09-.13L13.792 12z" fill="#FF3A44"/>
-            </svg>
-            Play Store
-          </a>
-          <a href="mailto:thegeniuscoder100@gmail.com" class="nav-btn" title="Contact Us">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
-              <rect width="20" height="16" x="2" y="4" rx="2"/>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-            </svg>
-            Contact
-          </a>
+      <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 8px;">
+        <img src="assets/pastel-notes-icon.png" alt="Pastel Notes Icon" style="width: 52px; height: 52px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.06);" />
+        <div>
+          <h1 style="margin-bottom: 2px;">Pastel Notes</h1>
+          <div class="app-meta">
+            Developer: <strong>Universalie Apps</strong> &nbsp;•&nbsp; Effective Date: <strong>September 25, 2026</strong>
+          </div>
         </div>
       </div>
-      <p class="tagline">Simple, reliable, and privacy-focused mobile applications built for everyday clarity.</p>
     </header>
 
-    <main>
+    <!-- Navigation Tabs -->
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" id="btn-privacy" onclick="showTab('privacy')">Privacy Policy</button>
+      <button class="tab-btn" id="btn-terms" onclick="showTab('terms')">Terms of Service</button>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- PRIVACY POLICY                             -->
+    <!-- ========================================== -->
+    <div id="pane-privacy" class="tab-pane active">
       
-      <!-- Featured App -->
-      <h2>Featured Applications</h2>
+      <h2>1. Overview</h2>
+      <p>
+        <strong>Pastel Notes</strong> is an offline-first note-taking application published by <strong>Universalie Apps</strong>. Your privacy is paramount:
+      </p>
+      <ul>
+        <li><strong>No External Tracking:</strong> We do not operate tracking servers or collect your personal note contents.</li>
+        <li><strong>Zero Advertising SDKs:</strong> The app does not contain third-party ad networks, advertising trackers, or device advertising ID collection.</li>
+        <li><strong>Local-First Storage:</strong> All notes, checklists, images, and audio recordings are stored directly on your device.</li>
+      </ul>
 
-      <div class="app-grid">
-        
-        <!-- Pastel Notes Card -->
-        <article class="app-card">
-          <div class="app-header-area">
-            <img src="assets/pastel-notes-icon.png" alt="Pastel Notes App Logo" class="app-icon" />
-            <div class="app-title-group">
-              <div class="app-title">
-                Pastel Notes
-                <span class="badge">Android</span>
-              </div>
-              <p class="app-subtitle">Calm, colorful, and offline-first notes &amp; checklists</p>
-            </div>
-          </div>
+      <h2>2. Data Stored Locally on Your Device</h2>
+      <ul>
+        <li><strong>Notes & Text:</strong> Titles, formatting, checklist items, tags, and timestamps are stored in a private local database on your device.</li>
+        <li><strong>Media Attachments:</strong> Images and videos attached to notes remain stored in the app's sandboxed local storage.</li>
+        <li><strong>Voice Recordings:</strong> Audio recorded with the built-in microphone tool is saved exclusively to your local device storage.</li>
+      </ul>
 
-          <p class="app-desc">
-            Capture thoughts, create checklists, and organize ideas with ease. Pastel Notes offers biometric security locks, tag organization, and optional Google Drive™ cloud backup — with zero advertisements or tracking.
-          </p>
-
-          <div class="feature-pills">
-            <span class="pill">🔒 Privacy-First &amp; Zero Ads</span>
-            <span class="pill">☁️ Google Drive™ Backup</span>
-            <span class="pill">📴 100% Offline Capable</span>
-          </div>
-
-          <div class="app-actions">
-            <a href="pastel-notes.html" class="btn btn-primary">
-              Privacy Policy &amp; Terms →
-            </a>
-          </div>
-        </article>
-
+      <h2>3. Device Permissions</h2>
+      <p>The application only requests runtime permissions required for explicit user features:</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Purpose</th>
+              <th>Data Handling</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>RECORD_AUDIO</code></td>
+              <td>Voice notes recorder inside the editor.</td>
+              <td>Processed in real-time to save local audio files on device. Never streamed or uploaded to developer servers.</td>
+            </tr>
+            <tr>
+              <td><code>POST_NOTIFICATIONS</code></td>
+              <td>Displays scheduled note reminder notifications.</td>
+              <td>Handled locally by the operating system notification manager.</td>
+            </tr>
+            <tr>
+              <td><code>SCHEDULE_EXACT_ALARM</code></td>
+              <td>Ensures timed reminders trigger accurately.</td>
+              <td>Scheduled locally with the device alarm manager.</td>
+            </tr>
+            <tr>
+              <td><code>USE_BIOMETRIC</code></td>
+              <td>Biometric lock for protected notes.</td>
+              <td>Handled entirely by Android hardware security. The app never accesses or stores fingerprint/face data.</td>
+            </tr>
+            <tr>
+              <td><code>INTERNET</code></td>
+              <td>Optional Google Drive cloud backup &amp; stability reporting.</td>
+              <td>Used for user-initiated Google Drive backups and anonymous crash diagnostics.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
-      <!-- Core Principles -->
-      <h2>Our Principles</h2>
-      <div class="values-grid">
-        <div class="value-box">
-          <div class="value-title">🛡️ Privacy by Default</div>
-          <p class="value-desc">Your personal data and notes stay on your device. We never operate tracking servers or profile users.</p>
-        </div>
-        <div class="value-box">
-          <div class="value-title">⚡ Offline-First</div>
-          <p class="value-desc">Core functionality works seamlessly with or without internet. Cloud features are always optional.</p>
-        </div>
-        <div class="value-box">
-          <div class="value-title">✨ Minimal &amp; Focused</div>
-          <p class="value-desc">Thoughtfully designed interfaces free of intrusive popups, banners, or unnecessary subscriptions.</p>
-        </div>
+      <h2>4. Optional Google Drive™ Cloud Backup</h2>
+      <p>
+        Pastel Notes includes an optional backup feature allowing you to save backup archives directly to your personal Google Drive account.
+      </p>
+      <ul>
+        <li><strong>Restricted App Data Scope:</strong> The app requests only the <code>drive.appdata</code> scope, which grants access solely to its own hidden backup file inside your personal Google Drive.</li>
+        <li><strong>No Access to Other Files:</strong> The app cannot read, view, modify, or delete any of your other personal Google Drive documents or files.</li>
+        <li><strong>Google API Policy Compliance:</strong> Pastel Notes' use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
+        <li><strong>Direct Connection:</strong> All backup data transfers communicate directly between your device and Google's servers over secure encrypted HTTPS.</li>
+      </ul>
+
+      <h2>5. Diagnostics & Analytics (Firebase Crashlytics & Analytics)</h2>
+      <p>
+        To ensure app stability, detect bugs, and resolve crashes across diverse Android device configurations, Pastel Notes integrates privacy-hardened <strong>Firebase Crashlytics</strong> and <strong>Google Analytics</strong> (provided by Google LLC):
+      </p>
+      <ul>
+        <li><strong>Crash Diagnostics:</strong> When an unexpected app error occurs, anonymous stack traces, OS versions, and device hardware specs are transmitted to help diagnose and resolve the issue.</li>
+        <li><strong>Anonymous Usage Metrics:</strong> Aggregated, non-identifiable feature interactions (such as note creation counts or backup trigger events) help us understand app performance and stability.</li>
+        <li><strong>Advertising ID Disabled:</strong> Google Advertising ID (`AD_ID`), hardware SSAID collection, and ad personalization signals are permanently disabled in the application manifest.</li>
+        <li><strong>Zero Content Collection:</strong> Neither diagnostic logs nor analytics ever collect, read, or transmit note contents, note titles, voice recordings, attachments, or personal email addresses.</li>
+        <li><strong>Encrypted Transmission:</strong> All diagnostic information is transmitted securely over encrypted HTTPS connections in compliance with Google Play Developer Policies.</li>
+      </ul>
+
+      <h2>6. Data Deletion and Retention</h2>
+      <ul>
+        <li><strong>Trash:</strong> Deleted notes remain in the in-app Trash until manually emptied or automatically expired after 30 days, which permanently removes all database records and attached media from your device.</li>
+        <li><strong>Cloud Backups:</strong> You can delete your backup file at any time from within the app settings or via your Google Account security settings.</li>
+        <li><strong>Uninstalling:</strong> Uninstalling the application permanently removes all locally stored data from your device.</li>
+      </ul>
+
+      <h2>7. Children's Privacy</h2>
+      <p>
+        Pastel Notes does not knowingly collect personal information from children under the age of 13. All note data remains on the user's personal device.
+      </p>
+
+      <h2>8. Contact Information</h2>
+      <p>
+        If you have questions regarding this Privacy Policy, please contact:
+      </p>
+      <div class="info-box">
+        <p><strong>Developer:</strong> Universalie Apps</p>
+        <p><strong>Email:</strong> <a href="mailto:thegeniuscoder100@gmail.com">thegeniuscoder100@gmail.com</a></p>
       </div>
 
-      <!-- Contact & Support -->
-      <h2>Contact &amp; Support</h2>
-      <div class="contact-card">
-        <p>Have questions, suggestions, or need assistance with any of our applications?</p>
-        <p style="margin-top: 10px;">
-          <strong>Direct Support:</strong> <a href="mailto:thegeniuscoder100@gmail.com">thegeniuscoder100@gmail.com</a>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- TERMS OF SERVICE                           -->
+    <!-- ========================================== -->
+    <div id="pane-terms" class="tab-pane">
+      
+      <h2>1. Agreement to Terms</h2>
+      <p>
+        By downloading, installing, or using <strong>Pastel Notes</strong>, provided by <strong>Universalie Apps</strong> ("we", "us", or "our"), you agree to be bound by these Terms of Service. If you do not agree with these terms, please do not use the application.
+      </p>
+
+      <h2>2. License</h2>
+      <p>
+        We grant you a personal, non-exclusive, non-transferable, revocable license to use Pastel Notes on your Android devices for personal, non-commercial note-taking and organization purposes in accordance with these Terms.
+      </p>
+
+      <h2>3. User Content and Ownership</h2>
+      <ul>
+        <li><strong>Your Ownership:</strong> You retain complete ownership and intellectual property rights to all notes, texts, media, audio recordings, and materials created or stored in the app.</li>
+        <li><strong>No Ownership Claim:</strong> We claim no intellectual property rights over your content.</li>
+        <li><strong>Backups:</strong> You are solely responsible for maintaining backups of your data.</li>
+      </ul>
+
+      <h2>4. Acceptable Use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the application for any unlawful purpose or in violation of applicable laws.</li>
+        <li>Attempt to decompile, reverse engineer, or disrupt the operation of the application.</li>
+      </ul>
+
+      <h2>5. Third-Party Services</h2>
+      <p>
+        Optional cloud backup features integrate with Google Drive™. Your use of Google services is governed by Google's Terms of Service and Privacy Policy. We are not responsible for third-party network outages or Google service availability.
+      </p>
+
+      <h2>6. Disclaimer of Warranties</h2>
+      <div class="info-box">
+        <p>
+          THE APPLICATION IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT GUARANTEE THAT THE APP WILL BE UNINTERRUPTED OR ERROR-FREE.
         </p>
       </div>
 
-    </main>
+      <h2>7. Limitation of Liability</h2>
+      <p>
+        TO THE MAXIMUM EXTENT PERMITTED BY LAW, UNIVERSALIE APPS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOSS OF DATA OR DEVICE MALFUNCTION ARISING FROM THE USE OF THE APPLICATION.
+      </p>
+
+      <h2>8. Termination</h2>
+      <p>
+        You may terminate this agreement at any time by uninstalling and deleting all copies of the application from your devices.
+      </p>
+
+      <h2>9. Governing Law</h2>
+      <p>
+        These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles.
+      </p>
+
+      <h2>10. Contact Information</h2>
+      <p>
+        For any questions regarding these Terms of Service, please contact:
+      </p>
+      <div class="info-box">
+        <p><strong>Developer:</strong> Universalie Apps</p>
+        <p><strong>Email:</strong> <a href="mailto:thegeniuscoder100@gmail.com">thegeniuscoder100@gmail.com</a></p>
+      </div>
+
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -470,5 +489,24 @@
 
   </div>
 
+  <script>
+    function showTab(tabId) {
+      document.getElementById('btn-privacy').classList.toggle('active', tabId === 'privacy');
+      document.getElementById('btn-terms').classList.toggle('active', tabId === 'terms');
+      document.getElementById('pane-privacy').classList.toggle('active', tabId === 'privacy');
+      document.getElementById('pane-terms').classList.toggle('active', tabId === 'terms');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Hash handling
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash === 'terms') {
+        showTab('terms');
+      } else {
+        showTab('privacy');
+      }
+    });
+  </script>
 </body>
 </html>
