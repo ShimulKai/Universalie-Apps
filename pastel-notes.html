@@ -32,6 +32,11 @@
       }
     }
 
+    html, body {
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -44,12 +49,19 @@
       color: var(--text);
       line-height: 1.65;
       font-size: 16px;
-      padding: 32px 20px 60px;
+      padding: 32px 16px 60px;
     }
 
     .container {
       max-width: 780px;
+      width: 100%;
       margin: 0 auto;
+      min-width: 0;
+    }
+
+    p, li, td, th, a, h1, h2, code {
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
     /* Top Navigation */
@@ -205,10 +217,20 @@
     }
 
     /* Table */
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 16px 0 20px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
     table {
       width: 100%;
+      min-width: 480px;
       border-collapse: collapse;
-      margin: 16px 0 20px;
+      margin: 0;
       font-size: 0.9rem;
     }
 
@@ -256,7 +278,7 @@
     <!-- Top Back Link -->
     <div class="top-nav" style="display: flex; align-items: center; justify-content: space-between;">
       <a href="index.html" class="back-link">← Universalie Apps</a>
-      <a href="#" class="nav-btn" title="Contact">
+      <a href="mailto:thegeniuscoder100@gmail.com" class="nav-btn" title="Contact Us">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
           <rect width="20" height="16" x="2" y="4" rx="2"/>
           <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
@@ -308,42 +330,44 @@
 
       <h2>3. Device Permissions</h2>
       <p>The application only requests runtime permissions required for explicit user features:</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Permission</th>
-            <th>Purpose</th>
-            <th>Data Handling</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>RECORD_AUDIO</code></td>
-            <td>Voice notes recorder inside the editor.</td>
-            <td>Processed in real-time to save local audio files on device. Never streamed or uploaded to developer servers.</td>
-          </tr>
-          <tr>
-            <td><code>POST_NOTIFICATIONS</code></td>
-            <td>Displays scheduled note reminder notifications.</td>
-            <td>Handled locally by the operating system notification manager.</td>
-          </tr>
-          <tr>
-            <td><code>SCHEDULE_EXACT_ALARM</code></td>
-            <td>Ensures timed reminders trigger accurately.</td>
-            <td>Scheduled locally with the device alarm manager.</td>
-          </tr>
-          <tr>
-            <td><code>USE_BIOMETRIC</code></td>
-            <td>Biometric lock for protected notes.</td>
-            <td>Handled entirely by Android hardware security. The app never accesses or stores fingerprint/face data.</td>
-          </tr>
-          <tr>
-            <td><code>INTERNET</code></td>
-            <td>Optional Google Drive cloud backup &amp; stability reporting.</td>
-            <td>Used for user-initiated Google Drive backups and anonymous crash diagnostics.</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Purpose</th>
+              <th>Data Handling</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>RECORD_AUDIO</code></td>
+              <td>Voice notes recorder inside the editor.</td>
+              <td>Processed in real-time to save local audio files on device. Never streamed or uploaded to developer servers.</td>
+            </tr>
+            <tr>
+              <td><code>POST_NOTIFICATIONS</code></td>
+              <td>Displays scheduled note reminder notifications.</td>
+              <td>Handled locally by the operating system notification manager.</td>
+            </tr>
+            <tr>
+              <td><code>SCHEDULE_EXACT_ALARM</code></td>
+              <td>Ensures timed reminders trigger accurately.</td>
+              <td>Scheduled locally with the device alarm manager.</td>
+            </tr>
+            <tr>
+              <td><code>USE_BIOMETRIC</code></td>
+              <td>Biometric lock for protected notes.</td>
+              <td>Handled entirely by Android hardware security. The app never accesses or stores fingerprint/face data.</td>
+            </tr>
+            <tr>
+              <td><code>INTERNET</code></td>
+              <td>Optional Google Drive cloud backup &amp; stability reporting.</td>
+              <td>Used for user-initiated Google Drive backups and anonymous crash diagnostics.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>4. Optional Google Drive™ Cloud Backup</h2>
       <p>
