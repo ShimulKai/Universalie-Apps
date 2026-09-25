@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universalie Apps — Simple, Privacy-Focused Mobile Apps</title>
+  <meta name="description" content="Official website and application catalog for Universalie Apps. Simple, reliable, and privacy-focused mobile applications." />
+  <link rel="icon" type="image/png" href="assets/universalieappsicon.png" />
+  <link rel="apple-touch-icon" href="assets/universalieappsicon.png" />
+  <style>
+    :root {
+      --bg: #fcfcfc;
+      --card-bg: #ffffff;
+      --text: #1a1a1a;
+      --text-muted: #5a5a5a;
+      --border: #e6e6e6;
+      --surface: #f4f7f5;
+      --primary: #2d5a49;
+      --primary-hover: #224538;
+      --primary-bg: #edf4f0;
+      --link: #1d6a4c;
+      --tag-bg: #edf4f0;
+      --tag-text: #2d5a49;
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121413;
+        --card-bg: #1a1d1b;
+        --text: #ededed;
+        --text-muted: #9fa6a2;
+        --border: #28302c;
+        --surface: #1e2421;
+        --primary: #78a895;
+        --primary-hover: #92bda9;
+        --primary-bg: #1c2b24;
+        --link: #8bc2ab;
+        --tag-bg: #22332a;
+        --tag-text: #a8d5c2;
+        --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+      padding: 48px 20px 72px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Brand Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 32px;
+      margin-bottom: 40px;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .header-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text) !important;
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+
+    .nav-btn:hover {
+      background-color: var(--card-bg);
+      border-color: var(--primary);
+      color: var(--primary) !important;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .tagline {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    /* Section Headings */
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 36px 0 18px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* App Card */
+    .app-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .app-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow);
+    }
+
+    .app-header-area {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+      object-fit: cover;
+      background-color: var(--surface);
+    }
+
+    .app-title-group {
+      flex: 1;
+    }
+
+    .app-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 12px;
+      background-color: var(--tag-bg);
+      color: var(--tag-text);
+      border: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .app-subtitle {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .app-desc {
+      color: var(--text);
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+
+    /* Feature Pills */
+    .feature-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      font-size: 0.82rem;
+      background-color: var(--surface);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* App Card Action Buttons */
+    .app-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 4px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #ffffff !important;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      text-decoration: none;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--text) !important;
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--surface);
+      border-color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    /* Philosophy / Values */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .value-box {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .value-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .value-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Contact Section */
+    .contact-card {
+      margin-top: 24px;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: var(--card-shadow);
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Top Header -->
+    <header>
+      <div class="header-top">
+        <div class="brand-row">
+          <img src="assets/universalieappsicon.png" alt="Universalie Apps Logo" class="brand-mark" style="object-fit: cover; border-radius: 10px; border: 1px solid var(--border);" />
+          <h1>Universalie Apps</h1>
+        </div>
+        <div class="header-actions">
+          <a href="https://play.google.com/store/apps/dev?id=8771248470338271145" target="_blank" rel="noopener" class="nav-btn" title="Google Play Developer Page">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;">
+              <path d="M3.609 1.814L13.792 12 3.61 22.186c-.37-.34-.61-.83-.61-1.396V3.21c0-.566.24-1.056.609-1.396z" fill="#00D3FF"/>
+              <path d="M17.18 8.612L13.792 12l3.388 3.388 3.82-2.183c.8-.457.8-1.203 0-1.66L17.18 8.612z" fill="#FFCE00"/>
+              <path d="M13.792 12L3.61 1.814C3.89 1.557 4.29 1.45 4.7 1.684l12.48 7.13-3.388 3.186z" fill="#00E676"/>
+              <path d="M13.792 12l3.388 3.388-12.48 7.13c-.41.234-.81.127-1.09-.13L13.792 12z" fill="#FF3A44"/>
+            </svg>
+            Play Store
+          </a>
+          <a href="mailto:thegeniuscoder100@gmail.com" class="nav-btn" title="Contact Us">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+              <rect width="20" height="16" x="2" y="4" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            Contact
+          </a>
+        </div>
+      </div>
+      <p class="tagline">Simple, reliable, and privacy-focused mobile applications built for everyday clarity.</p>
+    </header>
+
+    <main>
+      
+      <!-- Featured App -->
+      <h2>Featured Applications</h2>
+
+      <div class="app-grid">
+        
+        <!-- Pastel Notes Card -->
+        <article class="app-card">
+          <div class="app-header-area">
+            <img src="assets/pastel-notes-icon.png" alt="Pastel Notes App Logo" class="app-icon" />
+            <div class="app-title-group">
+              <div class="app-title">
+                Pastel Notes
+                <span class="badge">Android</span>
+              </div>
+              <p class="app-subtitle">Calm, colorful, and offline-first notes &amp; checklists</p>
+            </div>
+          </div>
+
+          <p class="app-desc">
+            Capture thoughts, create checklists, and organize ideas with ease. Pastel Notes offers biometric security locks, tag organization, and optional Google Drive™ cloud backup — with zero advertisements or tracking.
+          </p>
+
+          <div class="feature-pills">
+            <span class="pill">🔒 Privacy-First &amp; Zero Ads</span>
+            <span class="pill">☁️ Google Drive™ Backup</span>
+            <span class="pill">📴 100% Offline Capable</span>
+          </div>
+
+          <div class="app-actions">
+            <a href="pastel-notes.html" class="btn btn-primary">
+              Privacy Policy &amp; Terms →
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Core Principles -->
+      <h2>Our Principles</h2>
+      <div class="values-grid">
+        <div class="value-box">
+          <div class="value-title">🛡️ Privacy by Default</div>
+          <p class="value-desc">Your personal data and notes stay on your device. We never operate tracking servers or profile users.</p>
+        </div>
+        <div class="value-box">
+          <div class="value-title">⚡ Offline-First</div>
+          <p class="value-desc">Core functionality works seamlessly with or without internet. Cloud features are always optional.</p>
+        </div>
+        <div class="value-box">
+          <div class="value-title">✨ Minimal &amp; Focused</div>
+          <p class="value-desc">Thoughtfully designed interfaces free of intrusive popups, banners, or unnecessary subscriptions.</p>
+        </div>
+      </div>
+
+      <!-- Contact & Support -->
+      <h2>Contact &amp; Support</h2>
+      <div class="contact-card">
+        <p>Have questions, suggestions, or need assistance with any of our applications?</p>
+        <p style="margin-top: 10px;">
+          <strong>Direct Support:</strong> <a href="mailto:thegeniuscoder100@gmail.com">thegeniuscoder100@gmail.com</a>
+        </p>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2026 Universalie Apps. All rights reserved.
+    </footer>
+
+  </div>
+
+</body>
+</html>
