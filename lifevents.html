@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lifevents — Privacy Policy &amp; Terms of Service</title>
+  <meta name="description" content="Privacy Policy and Terms of Service for Lifevents: Unlimited Countdown." />
+  <link rel="icon" type="image/png" href="assets/universalieappsicon.png" />
+  <link rel="apple-touch-icon" href="assets/universalieappsicon.png" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --text-muted: #555555;
+      --border: #e2e2e2;
+      --surface: #f9f9f9;
+      --primary: #4f46e5;
+      --primary-bg: #eef2ff;
+      --link: #4338ca;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141414;
+        --text: #e6e6e6;
+        --text-muted: #9e9e9e;
+        --border: #2c2c2c;
+        --surface: #1e1e1e;
+        --primary: #818cf8;
+        --primary-bg: #1e1b4b;
+        --link: #a5b4fc;
+      }
+    }
+
+    html, body {
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+      padding: 32px 16px 60px;
+    }
+
+    .container {
+      max-width: 780px;
+      width: 100%;
+      margin: 0 auto;
+      min-width: 0;
+    }
+
+    p, li, a, h1, h2, h3 {
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px 7px 10px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      user-select: none;
+    }
+
+    .back-link .back-arrow {
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+      color: var(--text-muted);
+    }
+
+    .back-link:hover {
+      background-color: var(--primary-bg);
+      border-color: var(--primary);
+      color: var(--primary);
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .back-link:hover .back-arrow {
+      transform: translateX(-3px);
+      color: var(--primary);
+    }
+
+    .back-link:active {
+      transform: scale(0.98);
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text) !important;
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav-btn:hover {
+      background-color: var(--primary-bg);
+      border-color: var(--primary);
+      color: var(--primary) !important;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .nav-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .app-meta {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    /* Tabs */
+    .tab-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    .tab-btn {
+      background: none;
+      border: 1px solid transparent;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .tab-btn:hover {
+      color: var(--text);
+      background-color: var(--surface);
+    }
+
+    .tab-btn.active {
+      background-color: var(--primary-bg);
+      color: var(--primary);
+      border-color: var(--border);
+    }
+
+    /* Content Area */
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 28px 0 12px;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    ul, ol {
+      margin-bottom: 16px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.86em;
+      background-color: var(--surface);
+      padding: 3px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      white-space: nowrap;
+      word-break: normal;
+      overflow-wrap: normal;
+    }
+
+    /* Table */
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 16px 0 20px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background-color: var(--surface);
+    }
+
+    table {
+      width: 100%;
+      min-width: 620px;
+      border-collapse: collapse;
+      margin: 0;
+      font-size: 0.9rem;
+      background-color: var(--bg);
+    }
+
+    th, td {
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.55;
+    }
+
+    th {
+      background-color: var(--surface);
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    th:first-child, td:first-child {
+      white-space: nowrap;
+      width: 220px;
+      min-width: 200px;
+    }
+
+    td code {
+      display: inline-block;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    /* Info Box */
+    .info-box {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: 4px;
+      padding: 14px 16px;
+      margin: 18px 0;
+      font-size: 0.93rem;
+    }
+
+    .info-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Top Navigation -->
+    <div class="top-nav">
+      <a href="index.html" class="back-link" title="Return to Home">
+        <svg class="back-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="mailto:thegeniuscoder100@gmail.com" class="nav-btn" title="Contact Us">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+          <rect width="20" height="16" x="2" y="4" rx="2"/>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+        </svg>
+        <span>Contact</span>
+      </a>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 8px;">
+        <img src="assets/lifevents-icon.png" alt="Lifevents Icon" style="width: 52px; height: 52px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.06);" />
+        <div>
+          <h1 style="margin-bottom: 2px;">Lifevents</h1>
+          <div class="app-meta">
+            Effective Date: <strong>October 30, 2026</strong>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" id="btn-privacy" onclick="showTab('privacy')">Privacy Policy</button>
+      <button class="tab-btn" id="btn-terms" onclick="showTab('terms')">Terms of Service</button>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- PRIVACY POLICY                             -->
+    <!-- ========================================== -->
+    <div id="pane-privacy" class="tab-pane active">
+      
+      <h2>1. Overview</h2>
+      <p>
+        <strong>Lifevents</strong> (published by <strong>Universalie Apps</strong>) is an unlimited event countdown, milestone tracker, and home screen widget application for Android. Your privacy and data sovereignty are fundamental to our architecture:
+      </p>
+      <ul>
+        <li><strong>Offline-First Core:</strong> You can create unlimited countdowns, custom recurrence rules, alarms, notes, and widgets completely offline without ever creating an account.</li>
+        <li><strong>Zero Advertising SDKs:</strong> Lifevents contains no ad networks, tracking beacons, behavioral profiling, or advertising trackers.</li>
+        <li><strong>Optional Cloud Backup:</strong> Cloud synchronization via Google Sign-In is strictly optional. If enabled, your data is stored in your private Google Cloud Firestore partition, protected by strict user-level authorization rules.</li>
+      </ul>
+
+      <h2>2. Data Collection and Usage</h2>
+      <ul>
+        <li><strong>Countdown &amp; Milestone Details:</strong> Event titles, target dates, custom recurrence configurations, display unit settings, milestone notes, and alarms are stored in a private, sandboxed SQLite database (<code>events.db</code>) on your device.</li>
+        <li><strong>Google Account Information (Optional):</strong> When you choose to sign in with Google to enable cloud backup, your public Google profile name, email address, and unique user identifier (UID) are processed through Google Play Services / Firebase Authentication solely to establish your private cloud storage partition. We never sell or share this information.</li>
+        <li><strong>Cloud Backup Data (Optional):</strong> When cloud sync is active, your countdown events are transmitted via encrypted HTTPS and stored securely in Google Cloud Firestore under <code>users/{userId}/events/</code>. Only you can read, modify, or delete this data.</li>
+        <li><strong>Local JSON Export:</strong> You can export and import complete countdown backups to local files via Android's Storage Access Framework (SAF) without internet connectivity.</li>
+      </ul>
+
+      <h2>3. Device Permissions</h2>
+      <p>The application requests only permissions essential to its core countdown, alert, and widget features:</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Purpose</th>
+              <th>Data Handling</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>SCHEDULE_EXACT_ALARM</code> &amp; <code>USE_EXACT_ALARM</code></td>
+              <td>Triggers punctual alerts and alarms at the exact second a countdown reaches zero or hits a scheduled milestone.</td>
+              <td>Handled locally by Android AlarmManager. Never shared or uploaded.</td>
+            </tr>
+            <tr>
+              <td><code>POST_NOTIFICATIONS</code></td>
+              <td>Delivers timely countdown milestone alerts, anniversary reminders, and alarm banners.</td>
+              <td>Managed locally by the Android system notification framework.</td>
+            </tr>
+            <tr>
+              <td><code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code> &amp; <code>FOREGROUND_SERVICE</code></td>
+              <td>Provides reliable audio playback when a full-screen alarm rings until dismissed.</td>
+              <td>Plays local ringtone or notification sounds entirely on-device.</td>
+            </tr>
+            <tr>
+              <td><code>RECEIVE_BOOT_COMPLETED</code></td>
+              <td>Reschedules active countdown alarms and refreshes home screen widgets automatically after your device reboots.</td>
+              <td>Executes locally on device startup to re-register alarms with AlarmManager.</td>
+            </tr>
+            <tr>
+              <td><code>USE_BIOMETRIC</code></td>
+              <td>Optional fingerprint, face, or device PIN lock to secure your countdown events.</td>
+              <td>Processed exclusively by the Android BiometricPrompt hardware security module. The app never accesses or stores biometric data.</td>
+            </tr>
+            <tr>
+              <td><code>VIBRATE</code> &amp; <code>WAKE_LOCK</code></td>
+              <td>Provides tactile feedback and wakes the screen momentarily when an important countdown alarm triggers.</td>
+              <td>Executed strictly on-device.</td>
+            </tr>
+            <tr>
+              <td><code>INTERNET</code></td>
+              <td>Powers optional Google Sign-In and secure Cloud Firestore event synchronization.</td>
+              <td>All data transfers communicate directly with Google's Firebase servers over encrypted HTTPS (TLS 1.3).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>4. Data Storage, Security &amp; Encryption</h2>
+      <ul>
+        <li><strong>Encryption in Transit:</strong> All communications between the app and Google Cloud / Firebase servers are encrypted using industry-standard Transport Layer Security (TLS/HTTPS).</li>
+        <li><strong>Cloud Security Rules:</strong> Firestore security rules enforce strict user-level access controls: only requests with authenticated tokens matching your unique Google UID can access your countdown collection.</li>
+        <li><strong>No Third-Party Access:</strong> We do not provide access to your countdown data to any third-party advertisers, brokers, or external analytics vendors.</li>
+      </ul>
+
+      <h2>5. User Rights &amp; Complete Data Deletion</h2>
+      <p>You retain full control over your data at all times:</p>
+      <ul>
+        <li><strong>In-App Cloud Account Deletion:</strong> You can permanently wipe all your cloud-synced countdown data and sever all Google connections directly inside the app by going to <strong>Settings &gt; Account &amp; Backup &gt; Delete Account &amp; Cloud Backups</strong>. This permanently purges your Firestore documents and deletes your user record.</li>
+        <li><strong>Trash Retention:</strong> Deleted countdowns reside in the in-app Trash and are permanently purged after 30 days or immediately upon selecting "Empty Trash".</li>
+        <li><strong>Local Data Removal:</strong> Uninstalling the app immediately deletes all local database records, cached images, and preferences from your device.</li>
+      </ul>
+
+      <h2>6. Children's Privacy</h2>
+      <p>
+        Lifevents does not knowingly collect or solicit personal information from children under the age of 13. The application is family-friendly and operates as a standalone utility.
+      </p>
+
+      <h2>7. Contact Information</h2>
+      <p>
+        If you have questions, feedback, or data privacy requests regarding Lifevents, please contact:
+      </p>
+      <div class="info-box">
+        <p><strong>Universalie Apps Support</strong></p>
+        <p><strong>Email:</strong> <a href="mailto:thegeniuscoder100@gmail.com">thegeniuscoder100@gmail.com</a></p>
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- TERMS OF SERVICE                           -->
+    <!-- ========================================== -->
+    <div id="pane-terms" class="tab-pane">
+      
+      <h2>1. Agreement to Terms</h2>
+      <p>
+        By downloading, installing, or using <strong>Lifevents</strong> ("the Application"), published by <strong>Universalie Apps</strong> ("we", "us", or "our"), you agree to be bound by these Terms of Service. If you do not agree to these Terms, please do not use the Application.
+      </p>
+
+      <h2>2. License to Use</h2>
+      <p>
+        We grant you a personal, non-exclusive, non-transferable, revocable license to use Lifevents on your Android devices for personal, non-commercial countdown and milestone tracking purposes in compliance with these Terms.
+      </p>
+
+      <h2>3. User Content and Ownership</h2>
+      <ul>
+        <li><strong>Ownership:</strong> You retain complete intellectual property rights and full ownership over all event titles, notes, photos, and configurations you create or store within Lifevents.</li>
+        <li><strong>No Content Claims:</strong> Universalie Apps claims no ownership or proprietary interest in your content.</li>
+        <li><strong>Responsibility:</strong> You are responsible for maintaining backups of your critical milestone information using either the built-in JSON export or optional Google Cloud sync.</li>
+      </ul>
+
+      <h2>4. Acceptable Use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the Application for any unlawful purpose or in violation of applicable local, state, or international laws.</li>
+        <li>Attempt to reverse engineer, decompile, extract source code, or disrupt the operation of the Application.</li>
+        <li>Abuse, overload, or attempt unauthorized access to cloud synchronization endpoints.</li>
+      </ul>
+
+      <h2>5. Third-Party Services</h2>
+      <p>
+        Optional cloud backup features integrate with Google Firebase and Google Play Services. Your use of those features is subject to Google's Terms of Service and Privacy Policy. Universalie Apps is not liable for third-party network outages or Google service interruptions.
+      </p>
+
+      <h2>6. Disclaimer of Warranties</h2>
+      <div class="info-box">
+        <p>
+          THE APPLICATION IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TIMELINESS, OR NON-INFRINGEMENT. WE DO NOT GUARANTEE THAT ALERTS OR NOTIFICATIONS WILL TRIGGER UNINTERRUPTED UNDER ALL OPERATING SYSTEM BATTERY-SAVER OR DOZE CONDITIONS.
+        </p>
+      </div>
+
+      <h2>7. Limitation of Liability</h2>
+      <p>
+        TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, UNIVERSALIE APPS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, MISSED DEADLINES, OR DEVICE MALFUNCTION ARISING FROM YOUR USE OF OR INABILITY TO USE THE APPLICATION.
+      </p>
+
+      <h2>8. Termination</h2>
+      <p>
+        You may terminate this agreement at any time by uninstalling the Application and deleting any associated cloud backups. We reserve the right to modify or discontinue the Application or optional cloud services with reasonable notice.
+      </p>
+
+      <h2>9. Governing Law</h2>
+      <p>
+        These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law provisions.
+      </p>
+
+      <h2>10. Contact Us</h2>
+      <p>
+        For inquiries regarding these Terms of Service, please reach out to:
+      </p>
+      <div class="info-box">
+        <p><strong>Universalie Apps</strong></p>
+        <p><strong>Email:</strong> <a href="mailto:thegeniuscoder100@gmail.com">thegeniuscoder100@gmail.com</a></p>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2026 Universalie Apps. All rights reserved.
+    </footer>
+
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.getElementById('btn-privacy').classList.toggle('active', tabId === 'privacy');
+      document.getElementById('btn-terms').classList.toggle('active', tabId === 'terms');
+      document.getElementById('pane-privacy').classList.toggle('active', tabId === 'privacy');
+      document.getElementById('pane-terms').classList.toggle('active', tabId === 'terms');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Hash handling (#privacy or #terms)
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash === 'terms') {
+        showTab('terms');
+      } else {
+        showTab('privacy');
+      }
+    });
+  </script>
+</body>
+</html>
