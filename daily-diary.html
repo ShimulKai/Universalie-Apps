@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Diary — Privacy Policy &amp; Terms of Service</title>
+  <meta name="description" content="Privacy Policy and Terms of Service for Daily Diary." />
+  <link rel="icon" type="image/png" href="assets/universalieappsicon.png" />
+  <link rel="apple-touch-icon" href="assets/universalieappsicon.png" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --text-muted: #555555;
+      --border: #e2e2e2;
+      --surface: #f9f9f9;
+      --primary: #2d5a49;
+      --primary-bg: #edf4f0;
+      --link: #1d6a4c;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141414;
+        --text: #e6e6e6;
+        --text-muted: #9e9e9e;
+        --border: #2c2c2c;
+        --surface: #1e1e1e;
+        --primary: #78a895;
+        --primary-bg: #1c2b24;
+        --link: #8bc2ab;
+      }
+    }
+
+    html, body {
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+      padding: 32px 16px 60px;
+    }
+
+    .container {
+      max-width: 780px;
+      width: 100%;
+      margin: 0 auto;
+      min-width: 0;
+    }
+
+    p, li, a, h1, h2 {
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px 7px 10px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      user-select: none;
+    }
+
+    .back-link .back-arrow {
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+      color: var(--text-muted);
+    }
+
+    .back-link:hover {
+      background-color: var(--primary-bg);
+      border-color: var(--primary);
+      color: var(--primary);
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .back-link:hover .back-arrow {
+      transform: translateX(-3px);
+      color: var(--primary);
+    }
+
+    .back-link:active {
+      transform: scale(0.98);
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text) !important;
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav-btn:hover {
+      background-color: var(--primary-bg);
+      border-color: var(--primary);
+      color: var(--primary) !important;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .nav-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .app-meta {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    /* Tabs */
+    .tab-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    .tab-btn {
+      background: none;
+      border: 1px solid transparent;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .tab-btn:hover {
+      color: var(--text);
+      background-color: var(--surface);
+    }
+
+    .tab-btn.active {
+      background-color: var(--primary-bg);
+      color: var(--primary);
+      border-color: var(--border);
+    }
+
+    /* Content Area */
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 28px 0 12px;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    ul, ol {
+      margin-bottom: 16px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.86em;
+      background-color: var(--surface);
+      padding: 3px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      white-space: nowrap;
+      word-break: normal;
+      overflow-wrap: normal;
+    }
+
+    /* Table */
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 16px 0 20px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background-color: var(--surface);
+    }
+
+    table {
+      width: 100%;
+      min-width: 620px;
+      border-collapse: collapse;
+      margin: 0;
+      font-size: 0.9rem;
+      background-color: var(--bg);
+    }
+
+    th, td {
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.55;
+    }
+
+    th {
+      background-color: var(--surface);
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    th:first-child, td:first-child {
+      white-space: nowrap;
+      width: 220px;
+      min-width: 200px;
+    }
+
+    td code {
+      display: inline-block;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    /* Info Box */
+    .info-box {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: 4px;
+      padding: 14px 16px;
+      margin: 18px 0;
+      font-size: 0.93rem;
+    }
+
+    .info-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Top Navigation -->
+    <div class="top-nav">
+      <a href="index.html" class="back-link" title="Return to Home">
+        <svg class="back-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6"/>
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=thegeniuscoder100@gmail.com" target="_blank" rel="noopener noreferrer" class="nav-btn" title="Contact Us">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+          <rect width="20" height="16" x="2" y="4" rx="2"/>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+        </svg>
+        <span>Contact</span>
+      </a>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 8px;">
+        <img src="assets/daily-diary-icon.png" alt="Daily Diary Icon" style="width: 52px; height: 52px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.06);" />
+        <div>
+          <h1 style="margin-bottom: 2px;">Daily Diary</h1>
+          <div class="app-meta">
+            Effective Date: <strong>November 17, 2026</strong>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" id="btn-privacy" onclick="showTab('privacy')">Privacy Policy</button>
+      <button class="tab-btn" id="btn-terms" onclick="showTab('terms')">Terms of Service</button>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- PRIVACY POLICY                             -->
+    <!-- ========================================== -->
+    <div id="pane-privacy" class="tab-pane active">
+      
+      <h2>1. Overview</h2>
+      <p>
+        <strong>Daily Diary</strong> (package <code>com.universalieapps.dailydiary</code>) is an offline-first personal journaling and diary application published by <strong>Universalie Apps</strong>. Your thoughts and memories belong solely to you:
+      </p>
+      <ul>
+        <li><strong>No External Tracking or Analytics:</strong> We do not operate tracking servers, nor do we integrate third-party analytics or crash-telemetry SDKs.</li>
+        <li><strong>Zero Advertising SDKs:</strong> The app contains no ad networks, ad trackers, or advertising ID collection.</li>
+        <li><strong>Local-First Storage:</strong> All journal entries, mood logs, custom moods, tags, photos, videos, voice recordings, and file attachments are stored directly on your device.</li>
+      </ul>
+
+      <h2>2. Data Stored Locally on Your Device</h2>
+      <ul>
+        <li><strong>Journal Entries &amp; Moods:</strong> Titles, formatted diary text, timestamps, location labels, tags, favorite/pin states, and custom mood definitions are stored locally in the app's private storage directory (<code>journal_entries.json</code> and <code>custom_moods.json</code>).</li>
+        <li><strong>Media Attachments:</strong> Photos, videos, audio clips, and document files you attach to entries remain stored locally on your device.</li>
+        <li><strong>Voice Recordings:</strong> Audio recorded with the in-app voice recorder is saved exclusively to your device's local storage.</li>
+        <li><strong>Home Screen Widgets &amp; App Lock:</strong> Android home screen widgets (Quick Actions, Notes Feed, and Sticky Note) read strictly from your local journal storage. App Lock uses Android's hardware-backed biometric/device authentication without ever accessing or storing raw biometric data.</li>
+        <li><strong>Local Backups &amp; Exports:</strong> User-initiated <code>.zip</code> vault snapshots (entries and media) and <code>.json</code> backups are generated locally on-device and shared only when you explicitly choose to export or share them.</li>
+      </ul>
+
+      <h2>3. Device Permissions</h2>
+      <p>Daily Diary requests only the permissions needed for features you choose to use:</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Purpose</th>
+              <th>Data Handling</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>RECORD_AUDIO</code></td>
+              <td>Record voice notes directly inside the journal entry composer.</td>
+              <td>Saved locally as audio files on your device. Never streamed or uploaded to developer servers.</td>
+            </tr>
+            <tr>
+              <td><code>READ_MEDIA_IMAGES</code><br><code>READ_MEDIA_VIDEO</code><br><code>READ_MEDIA_AUDIO</code><br><small style="color: var(--text-muted);">(Android 13+)</small><br><code>READ_EXTERNAL_STORAGE</code><br><small style="color: var(--text-muted);">(Android 12 &amp; below)</small></td>
+              <td>Browse, preview, and attach photos, videos, audio files, or documents to your diary entries, and import local backups.</td>
+              <td>Accessed strictly on-device when you select files. Never scanned in the background, uploaded to developer servers, or shared with third parties.</td>
+            </tr>
+            <tr>
+              <td><code>INTERNET</code><br><code>ACCESS_NETWORK_STATE</code></td>
+              <td>Optional Google Sign-In and Google Drive™ cloud backup &amp; restore.</td>
+              <td>Used exclusively when you sign in with Google to sync or restore your private Drive backup. The app operates 100% offline otherwise.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>4. Optional Google Drive™ Cloud Backup</h2>
+      <p>
+        Daily Diary includes an optional cloud backup feature allowing you to back up and restore your journal entries and vault archives using your personal Google Drive™ account.
+      </p>
+      <ul>
+        <li><strong>Restricted App Data Scope:</strong> The app requests only the <code>https://www.googleapis.com/auth/drive.appdata</code> scope, granting access solely to its own hidden application folder (<code>daily_diary_backup.json</code> and <code>daily_diary_vault.zip</code>) in your Google Drive.</li>
+        <li><strong>No Access to Other Drive Files:</strong> Daily Diary cannot see, read, modify, or delete any of your other personal Google Drive files or folders.</li>
+        <li><strong>Account Info Displayed Locally:</strong> When signed in, your Google display name, email address, and profile photo are displayed locally in the Account &amp; Backup screen so you know which account is connected.</li>
+        <li><strong>Google API Policy Compliance:</strong> Daily Diary's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
+        <li><strong>Direct Encrypted Transfer:</strong> Backup and restore requests communicate directly between your device and Google's servers over encrypted HTTPS.</li>
+      </ul>
+
+      <h2>5. Data Deletion and Disconnection</h2>
+      <ul>
+        <li><strong>In-App Delete &amp; Disconnect:</strong> Inside <strong>Settings → Account &amp; Backup → Account &amp; Data Removal</strong>, you can permanently delete all cloud backups stored in Google Drive's <code>appDataFolder</code>, revoke/sever Google account access to this app, and optionally delete all local journal entries on your device.</li>
+        <li><strong>Google Account Security Settings:</strong> You can also revoke Daily Diary's access at any time from your Google Account third-party connections settings.</li>
+        <li><strong>Uninstalling:</strong> Uninstalling the application permanently removes all locally stored entries, custom moods, and app data from your device.</li>
+      </ul>
+
+      <h2>6. Children's Privacy</h2>
+      <p>
+        Daily Diary does not knowingly collect personal information from children under the age of 13. All journal data remains on the user's personal device or in their own personal Google Drive <code>appDataFolder</code> if they choose to enable backup.
+      </p>
+
+      <h2>7. Contact Information</h2>
+      <p>
+        If you have questions regarding this Privacy Policy, please contact:
+      </p>
+      <div class="info-box">
+        <p><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=thegeniuscoder100@gmail.com" target="_blank" rel="noopener noreferrer">thegeniuscoder100@gmail.com</a></p>
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- TERMS OF SERVICE                           -->
+    <!-- ========================================== -->
+    <div id="pane-terms" class="tab-pane">
+      
+      <h2>1. Agreement to Terms</h2>
+      <p>
+        By downloading, installing, or using <strong>Daily Diary</strong>, provided by <strong>Universalie Apps</strong> ("we", "us", or "our"), you agree to be bound by these Terms of Service. If you do not agree with these terms, please do not use the application.
+      </p>
+
+      <h2>2. License</h2>
+      <p>
+        We grant you a personal, non-exclusive, non-transferable, revocable license to use Daily Diary on your Android devices for personal, non-commercial journaling and diary purposes in accordance with these Terms.
+      </p>
+
+      <h2>3. User Content and Ownership</h2>
+      <ul>
+        <li><strong>Your Ownership:</strong> You retain complete ownership and intellectual property rights to all journal entries, moods, tags, photos, videos, voice recordings, and files created or stored in the app.</li>
+        <li><strong>No Ownership Claim:</strong> We claim no intellectual property rights over your content.</li>
+        <li><strong>Backups:</strong> You are solely responsible for maintaining backups of your journal data.</li>
+      </ul>
+
+      <h2>4. Acceptable Use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the application for any unlawful purpose or in violation of applicable laws.</li>
+        <li>Attempt to decompile, reverse engineer, or disrupt the operation of the application.</li>
+      </ul>
+
+      <h2>5. Third-Party Services</h2>
+      <p>
+        Optional cloud backup features integrate with Google Drive™. Your use of Google services is governed by Google's Terms of Service and Privacy Policy. We are not responsible for third-party network outages or Google service availability.
+      </p>
+
+      <h2>6. Disclaimer of Warranties</h2>
+      <div class="info-box">
+        <p>
+          THE APPLICATION IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT GUARANTEE THAT THE APP WILL BE UNINTERRUPTED OR ERROR-FREE.
+        </p>
+      </div>
+
+      <h2>7. Limitation of Liability</h2>
+      <p>
+        TO THE MAXIMUM EXTENT PERMITTED BY LAW, UNIVERSALIE APPS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOSS OF DATA OR DEVICE MALFUNCTION ARISING FROM THE USE OF THE APPLICATION.
+      </p>
+
+      <h2>8. Termination</h2>
+      <p>
+        You may terminate this agreement at any time by disconnecting your account, deleting your data, and uninstalling the application from your devices.
+      </p>
+
+      <h2>9. Governing Law</h2>
+      <p>
+        These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles.
+      </p>
+
+      <h2>10. Contact Information</h2>
+      <p>
+        For any questions regarding these Terms of Service, please contact:
+      </p>
+      <div class="info-box">
+        <p><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=thegeniuscoder100@gmail.com" target="_blank" rel="noopener noreferrer">thegeniuscoder100@gmail.com</a></p>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2026 Universalie Apps. All rights reserved.
+    </footer>
+
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.getElementById('btn-privacy').classList.toggle('active', tabId === 'privacy');
+      document.getElementById('btn-terms').classList.toggle('active', tabId === 'terms');
+      document.getElementById('pane-privacy').classList.toggle('active', tabId === 'privacy');
+      document.getElementById('pane-terms').classList.toggle('active', tabId === 'terms');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Hash handling
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash === 'terms') {
+        showTab('terms');
+      } else {
+        showTab('privacy');
+      }
+    });
+  </script>
+</body>
+</html>
