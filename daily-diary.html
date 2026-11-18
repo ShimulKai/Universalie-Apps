@@ -409,9 +409,9 @@
               <td>Saved locally as audio files on your device. Never streamed or uploaded to developer servers.</td>
             </tr>
             <tr>
-              <td><code>READ_MEDIA_IMAGES</code><br><code>READ_MEDIA_VIDEO</code><br><code>READ_MEDIA_AUDIO</code><br><small style="color: var(--text-muted);">(Android 13+)</small><br><code>READ_EXTERNAL_STORAGE</code><br><small style="color: var(--text-muted);">(Android 12 &amp; below)</small></td>
-              <td>Browse, preview, and attach photos, videos, audio files, or documents to your diary entries, and import local backups.</td>
-              <td>Accessed strictly on-device when you select files. Never scanned in the background, uploaded to developer servers, or shared with third parties.</td>
+              <td><code>ACTION_GET_CONTENT</code><br><small style="color: var(--text-muted);">(Android System Picker)</small></td>
+              <td>Browse and attach photos, videos, audio files, or documents to diary entries and import local backups.</td>
+              <td>Uses Android's privacy-preserving system file/media picker—grants access only to the specific files you select, without broad storage permissions.</td>
             </tr>
             <tr>
               <td><code>INTERNET</code><br><code>ACCESS_NETWORK_STATE</code></td>
